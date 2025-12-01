@@ -84,5 +84,50 @@ def menu():
 
     while True:
         print("\n===== MENU FREE FIRE =====")
-        print("1 - Cad
+        print("1 - Cadastrar jogador")
+        print("2 - Buscar jogador")
+        print("3 - Atualizar jogador")
+        print("4 - Remover jogador")
+        print("5 - Exibir ranking")
+        print("0 - Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            nickname = input("Nickname: ")
+            kills = int(input("Kills: "))
+            tempo = int(input("Tempo sobrevivido (min): "))
+            lista.cadastrar(nickname, kills, tempo)
+
+        elif opcao == "2":
+            nome = input("Nickname para buscar: ")
+            jogador = lista.buscar(nome)
+            if jogador:
+                print(f"Encontrado: {jogador.nickname} - {jogador.pontuacao} pontos")
+            else:
+                print("Jogador não encontrado.")
+
+        elif opcao == "3":
+            nome = input("Nickname a atualizar: ")
+            kills = int(input("Novas kills: "))
+            tempo = int(input("Novo tempo sobrevivido: "))
+            lista.atualizar(nome, kills, tempo)
+
+        elif opcao == "4":
+            nome = input("Nickname para remover: ")
+            lista.remover(nome)
+
+        elif opcao == "5":
+            lista.exibir_ranking()
+
+        elif opcao == "0":
+            print("Saindo...")
+            break
+
+        else:
+            print("Opção inválida, tente novamente.")
+
+
+if __name__ == "__main__":
+    menu()
 

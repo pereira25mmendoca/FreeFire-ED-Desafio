@@ -29,7 +29,7 @@ Classe Jogador
 
 Classe ListaEncadeada
 
-Operações de inserir, buscar, atualizar, remover
+Operações de inserir, buscar, atualizar e remover
 
 Menu interativo no terminal
 

@@ -48,3 +48,4 @@ python main.py
 ## 🏆 Ranking
 
 O ranking é gerado automaticamente com base na pontuação dos jogadores cadastrados, exibindo do maior para o menor.
+
